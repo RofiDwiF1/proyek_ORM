@@ -9,7 +9,7 @@
         <table class="min-w-full bg-white">
             <thead class="bg-gray-100">
                 <tr>
-                    <th class="py-2 px-4 text-left">#</th>
+                    <th class="py-2 px-4 text-left">No</th>
                     <th class="py-2 px-4 text-left">Name</th>
                     <th class="py-2 px-4 text-left">Company</th>
                     <th class="py-2 px-4 text-left">Skills</th>
@@ -19,7 +19,7 @@
             <tbody>
                 @foreach ($employees as $employee)
                 <tr>
-                    <td class="border px-4 py-2">{{ $employee->id }}</td>
+                    <td class="border px-4 py-2">{{ $loop->iteration }}</td>
                     <td class="border px-4 py-2">{{ $employee->name }}</td>
                     <td class="border px-4 py-2">{{ $employee->company->name }}</td>
                     <td class="border px-4 py-2">

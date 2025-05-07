@@ -28,7 +28,7 @@
         <table class="min-w-full divide-y divide-gray-200 text-sm">
             <thead class="bg-gray-100 text-gray-700">
                 <tr>
-                    <th class="px-4 py-3 text-left">#</th>
+                    <th class="px-4 py-3 text-left">No</th>
                     <th class="px-4 py-3 text-left">Name</th>
                     <th class="px-4 py-3 text-left">Skills</th>
                 </tr>
@@ -36,7 +36,7 @@
             <tbody class="divide-y divide-gray-100">
                 @foreach ($company->employees as $employee)
                 <tr class="hover:bg-gray-50">
-                    <td class="px-4 py-3">{{ $employee->id }}</td>
+                    <td class="px-4 py-3">{{ $loop->iteration }}</td>
                     <td class="px-4 py-3 font-medium text-gray-900">{{ $employee->name }}</td>
                     <td class="px-4 py-3 text-gray-700">
                         @if ($employee->skills->isEmpty())
@@ -55,4 +55,12 @@
         </table>
     </div>
 </div>
+    
+    <!-- Footer only for Companies page -->
+    <footer class="bg-white dark:bg-gray-800 p-6 mt-8 shadow-inner rounded-t-lg w-full" >
+        <div class="max-w-7xl mx-auto text-center text-gray-500 dark:text-gray-400">
+            <p>Laravel ORM Relationships Demo &copy; 2025</p>
+            <p class="mt-2">Made with 💙 by ORMAS Team</p>
+        </div>
+    </footer>
 @endsection
